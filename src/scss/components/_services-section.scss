@@ -1,7 +1,124 @@
 .services-section {
   padding-top: 212px;
+  padding-bottom: 80px;
   background-image: url("../img/services-bg.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+
+  &__learn {
+    @include flex-all-center;
+  }
+
+  &__subtitle {
+    margin: 0;
+    margin-right: 40px;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 150%;
+    color: var(--color-ebony);
+  }
+
+  &__list {
+    margin-bottom: 80px;
+  }
+}
+
+.services-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+.services-item {
+  position: relative;
+  display: block;
+  border: 1px solid #e5e8ed;
+  border-radius: 4px;
+  padding: 0 10px;
+  padding-top: 89px;
+  padding-bottom: 89px;
+  box-shadow: var(--main-shadow);
+  background: var(--color-light);
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 3;
+    border-radius: inherit;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: var(--color-ebony);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 5;
+    border-radius: inherit;
+    background-color: rgba(#1e212c, 0.6);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
+
+  &__content {
+    @include flex-column-center;
+
+    position: relative;
+    z-index: 10;
+  }
+
+  &__icon {
+    margin-bottom: 24px;
+    width: 52px;
+    height: 52px;
+    fill: var(--color-primary);
+    object-fit: cover;
+    transition: fill 0.3s ease-in-out;
+  }
+
+  &__title {
+    margin: 0;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 150%;
+    text-align: center;
+    color: var(--color-ebony);
+    transition: color 0.3s ease-in-out;
+  }
+
+  &:hover {
+    &::before {
+      opacity: 1;
+    }
+
+    &::after {
+      opacity: 1;
+    }
+
+    .services-item__icon {
+      fill: var(--color-light);
+    }
+
+    .services-item__title {
+      color: var(--color-light);
+    }
+  }
+
+  &--construct {
+    &::before {
+      background-image: url("../img/services-1.jpg");
+    }
+  }
 }
