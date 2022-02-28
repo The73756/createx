@@ -54,3 +54,15 @@ document.querySelector('.portfolio-section__next').addEventListener('click', () 
   nextActiveSlide.classList.add('slider-visible');
   nextNextActiveSlide.classList.add('slider-visible');
 });
+
+
+const parttestimonialsSlider = new Swiper('.testimonials__items', {
+  modules: [Navigation, Pagination],
+  slidesPerView: 1,
+  spaceBetween: gap,
+  loop: true,
+  navigation: {
+    nextEl: '.testimonials__next',
+    prevEl: '.testimonials__prev',
+  },
+});
