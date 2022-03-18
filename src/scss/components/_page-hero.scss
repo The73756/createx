@@ -40,6 +40,56 @@
     color: var(--color-storm);
   }
 
+  &__meta {
+    .article-meta__item {
+      font-size: 16px;
+      line-height: 160%;
+
+      &:not(:last-child) {
+        margin-right: 22px;
+      }
+
+      &--comments {
+        padding-left: 27px;
+        background-size: 20px 20px;
+      }
+    }
+
+    a.article-meta__item {
+      font-weight: 700;
+      color: var(--color-primary);
+    }
+
+    time.article-meta__item {
+      padding-left: 28px;
+      background-image: url("../img/time.svg");
+      background-position: left bottom -1px;
+      background-size: 20px 20px;
+      background-repeat: no-repeat;
+    }
+
+    .article-meta__item:not(:last-child)::after {
+      right: -14px;
+      height: 16px;
+      color: var(--color-storm);
+    }
+  }
+
+  &__social {
+    svg {
+      fill: var(--color-storm);
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+
+    .social__item:not(:last-child) {
+      margin-right: 12px;
+    }
+  }
+
   &--services {
     background-image: url("../img/services-hero-bg.png");
     background-position: right -8px top;
@@ -74,5 +124,16 @@
   &--news {
     background-image: url("../img/news-hero-bg.png");
     background-position: right -9px bottom;
+  }
+
+  &--post {
+    .page-hero__title {
+      margin-bottom: 48px;
+      max-width: none;
+      font-size: 64px;
+      line-height: 120%;
+      letter-spacing: 1px;
+      text-transform: initial;
+    }
   }
 }
