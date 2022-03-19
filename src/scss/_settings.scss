@@ -259,6 +259,61 @@ a {
   }
 }
 
+.custom-radio {
+  &__input {
+    position: absolute;
+    opacity: 0;
+  }
+
+  &__text {
+    position: relative;
+    padding-left: 27px;
+    font-size: 16px;
+    line-height: 160%;
+    color: var(--color-gray);
+  }
+
+  &__text::before {
+    content: "";
+    position: absolute;
+    left: -1px;
+    top: 1px;
+    display: inline-block;
+    border: 1px solid #b3b7bc;
+    border-radius: 100%;
+    width: 16px;
+    height: 16px;
+    transition: background-color 0.3s ease-in-out;
+  }
+
+  &__text::after {
+    content: "";
+    position: absolute;
+    left: -1px;
+    top: 1px;
+    width: 16px;
+    height: 16px;
+    background-image: url("../img/check-circle.svg");
+    background-position: center;
+    background-size: 8px 8px;
+    background-repeat: no-repeat;
+    opacity: 0;
+    transition: border-color 0.3s ease-in-out;
+  }
+
+  &__input:checked + &__text::before {
+    border-color: var(--color-primary);
+  }
+
+  &__input:checked + &__text::after {
+    opacity: 1;
+  }
+
+  &__input:focus + &__text {
+    outline: 3px solid var(--color-primary);
+  }
+}
+
 .grid {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
