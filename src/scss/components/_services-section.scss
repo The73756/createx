@@ -85,6 +85,11 @@
     transition: color 0.3s ease-in-out;
   }
 
+  &:focus {
+    outline: 2px solid rgb(255 90 48 / 40%);
+    outline-offset: 2px;
+  }
+
   &:hover {
     &::before {
       opacity: 1;

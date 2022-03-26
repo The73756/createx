@@ -17,8 +17,12 @@
     font-size: 14px;
     line-height: 150%;
 
-    ::placeholder {
+    &::placeholder {
       color: #9a9ca5;
+    }
+
+    &:focus {
+      outline-color: rgb(255 90 48 / 40%);
     }
 
     &--big {

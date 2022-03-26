@@ -6,4 +6,3 @@ selects.forEach(el => {
     searchEnabled: false,
   });
 });
-const choices = new Choices(element);

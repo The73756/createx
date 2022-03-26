@@ -21,3 +21,10 @@
     width: 100%;
   }
 }
+
+.logo {
+  &:focus {
+    outline: 2px solid rgb(255 90 48 / 40%);
+    outline-offset: 2px;
+  }
+}

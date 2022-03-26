@@ -156,20 +156,82 @@ a {
   letter-spacing: 0.5px;
   text-transform: uppercase;
   color: var(--color-light);
+  transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  cursor: pointer;
 
   &--fill {
     background-color: var(--color-primary);
+
+    &:focus {
+      outline: 2px solid rgb(255 90 48 / 40%);
+      outline-offset: 2px;
+    }
+
+    &:hover {
+      background-color: var(--color-active);
+    }
+
+    &:active {
+      background-color: var(--color-active);
+    }
   }
 
   &--stroke {
     &-light {
       border-color: var(--color-light);
       color: var(--color-light);
+
+      &:focus {
+        outline: 2px solid rgb(255 90 48 / 40%);
+        outline-offset: 2px;
+      }
+
+      &:hover {
+        border-color: var(--color-primary);
+        background-color: var(--color-primary);
+      }
+
+      &:active {
+        border-color: var(--color-active);
+        background-color: var(--color-active);
+      }
     }
 
     &-primary {
       border-color: var(--color-primary);
       color: var(--color-primary);
+
+      &:focus {
+        outline: 2px solid rgb(255 90 48 / 40%);
+        outline-offset: 2px;
+      }
+
+      &:hover {
+        border-color: var(--color-primary);
+        color: var(--color-light);
+        background-color: var(--color-primary);
+      }
+
+      &:active {
+        border-color: var(--color-active);
+        color: var(--color-light);
+        background-color: var(--color-active);
+      }
+    }
+
+    &:focus {
+      outline: 2px solid rgb(255 90 48 / 40%);
+      outline-offset: 2px;
+    }
+
+    &:hover {
+      border-color: var(--color-primary);
+      background-color: var(--color-primary);
+    }
+
+    &:active {
+      border-color: var(--color-active);
+      background-color: var(--color-active);
     }
   }
 }
@@ -229,6 +291,7 @@ a {
     width: 16px;
     height: 16px;
     transition: background-color 0.3s ease-in-out;
+    cursor: pointer;
   }
 
   &__text::after {
@@ -244,6 +307,7 @@ a {
     background-repeat: no-repeat;
     opacity: 0;
     transition: opacity 0.3s ease-in-out;
+    cursor: pointer;
   }
 
   &__input:checked + &__text::before {
@@ -255,7 +319,40 @@ a {
   }
 
   &__input:focus + &__text {
-    outline: 3px solid var(--color-primary);
+    outline: 2px solid rgb(255 90 48 / 40%);
+    outline-offset: 2px;
+  }
+}
+
+.custom-file {
+  cursor: pointer;
+
+  &__input {
+    position: absolute;
+    opacity: 0;
+  }
+
+  &__text {
+    position: relative;
+    display: block;
+    padding-left: 36px;
+    font-size: 14px;
+    line-height: 170%;
+    color: var(--color-gray);
+    background-image: url("../img/file-icon.svg");
+    background-position: left center;
+    background-size: 24px 24px;
+    background-repeat: no-repeat;
+    transition: color 0.3s ease-in-out;
+
+    &:hover {
+      color: var(--color-primary);
+    }
+  }
+
+  &__input:focus + &__text {
+    outline: 2px solid rgb(255 90 48 / 40%);
+    outline-offset: 2px;
   }
 }
 
@@ -310,7 +407,8 @@ a {
   }
 
   &__input:focus + &__text {
-    outline: 3px solid var(--color-primary);
+    outline: 2px solid rgb(255 90 48 / 40%);
+    outline-offset: 2px;
   }
 }
 
@@ -318,4 +416,148 @@ a {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   gap: var(--grid-gap);
+}
+
+.to-top {
+  position: fixed;
+  right: calc((100% - 1230px) / 2);
+  bottom: 80px;
+  z-index: 1000;
+  display: flex;
+  align-items: flex-end;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+
+  &__text {
+    margin-right: 16px;
+    font-size: 14px;
+    line-height: 150%;
+    text-shadow: 2px 0 6px #000;
+    text-transform: uppercase;
+    color: var(--color-light);
+  }
+
+  &__icon {
+    @include flex-all-center;
+
+    border-radius: 4px;
+    width: 40px;
+    height: 40px;
+    background-color: var(--color-primary);
+    transition: background-color 0.3s ease-in-out;
+
+    svg {
+      width: 24px;
+      height: 24px;
+      fill: var(--color-light);
+      object-fit: cover;
+    }
+
+    &:hover {
+      background-color: var(--color-active);
+    }
+  }
+
+  &--active {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.site-modal {
+  border-radius: 4px;
+  padding: 48px;
+  width: 486px;
+
+  .graph-modal__close {
+    right: 24px;
+    top: 24px;
+    width: 24px;
+    height: 24px;
+    background-image: url("../img/close-modal.svg");
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 24px;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 150%;
+    text-align: center;
+    color: var(--color-ebony);
+  }
+
+  &__field {
+    margin-bottom: 20px;
+  }
+
+  &__btn {
+    margin-top: 20px;
+    padding: 11px 38px;
+    width: 100%;
+    font-size: 14px;
+  }
+
+  .choices {
+    width: 100%;
+  }
+
+  .is-focused {
+    outline: 2px solid rgb(255 90 48 / 40%);
+    outline-offset: 2px;
+  }
+
+  .choices__inner {
+    margin: 0;
+    border: 1px solid #d7dadd;
+    border-radius: 4px;
+    padding: 0;
+    height: 52px;
+    background-color: var(--color-athens);
+  }
+
+  .choices__list--single .choices__placeholder {
+    font-size: 14px;
+    line-height: 160%;
+    color: #9a9ca5;
+    opacity: 1;
+  }
+
+  .choices[data-type*="select-one"] .choices__inner {
+    padding-bottom: 0;
+  }
+
+  .choices__list--single {
+    display: flex;
+    align-items: center;
+    padding-left: 15px;
+    height: 100%;
+  }
+
+  .choices[data-type*="select-one"]::after {
+    right: 19px;
+    margin-top: 0 !important;
+    border: none;
+    width: 14px;
+    height: 7px;
+    background-image: url("../img/angle-down.svg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transform: translateY(-50%);
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .choices[data-type*="select-one"].is-open::after {
+    transform: translateY(-50%) rotate(180deg);
+  }
+
+  .choices__list--dropdown .choices__item--selectable::after {
+    display: none;
+  }
+
+  .choices__list--dropdown {
+    background-color: var(--color-athens);
+  }
 }

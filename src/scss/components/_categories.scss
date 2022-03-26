@@ -29,6 +29,18 @@
     color: #9a9ca5;
     transition: color 0.3s ease-in-out;
 
+    &:focus {
+      outline: 2px solid rgb(255 90 48 / 40%);
+    }
+
+    &:hover {
+      color: var(--color-primary);
+    }
+
+    &:active {
+      color: var(--color-active);
+    }
+
     &--active {
       border: 1px solid currentcolor;
       color: var(--color-primary);
@@ -72,6 +84,19 @@
       height: 24px;
       fill: currentcolor;
       object-fit: cover;
+    }
+
+    &:focus {
+      outline: 2px solid rgb(255 90 48 / 40%);
+      outline-offset: 2px;
+    }
+
+    &:hover {
+      color: var(--color-primary);
+    }
+
+    &:active {
+      color: var(--color-active);
     }
 
     &--active {

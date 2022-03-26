@@ -23,9 +23,19 @@
       object-fit: cover;
     }
 
+    &:focus {
+      outline: 2px solid rgb(255 90 48 / 40%);
+      outline-offset: 2px;
+    }
+
     &:hover {
       color: var(--color-light);
       background-color: var(--color-primary);
+    }
+
+    &:active {
+      color: var(--color-light);
+      background-color: var(--color-active);
     }
   }
 }

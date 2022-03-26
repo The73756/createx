@@ -69,10 +69,6 @@
     display: none;
     grid-column: 4 span;
 
-    // &:nth-child(n + 10) {
-    //   display: none;
-    // }
-
     &--visible {
       display: block;
     }
@@ -91,6 +87,7 @@
   font-size: 16px;
   line-height: 160%;
   color: var(--color-gray);
+  transition: color 0.3s ease-in-out;
 
   svg {
     margin-right: 16px;
@@ -98,5 +95,27 @@
     height: 24px;
     fill: currentcolor;
     object-fit: cover;
+  }
+
+  &:focus {
+    outline: 2px solid rgb(255 90 48 / 40%);
+    outline-offset: 2px;
+  }
+
+  &:hover {
+    color: var(--color-primary);
+  }
+}
+
+.portfolio-tabs-nav__btn {
+  &:focus {
+    outline: 2px solid rgb(255 90 48 / 40%);
+    outline-offset: 2px;
+  }
+
+  &:hover {
+    .portfolio-tabs-nav__text {
+      color: var(--color-ebony);
+    }
   }
 }

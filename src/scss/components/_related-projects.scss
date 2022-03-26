@@ -25,6 +25,9 @@
   }
 
   &__items {
+    margin: -100px;
+    padding: 100px;
+
     .swiper-slide {
       opacity: 0;
       visibility: hidden;
