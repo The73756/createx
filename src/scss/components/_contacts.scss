@@ -5,11 +5,24 @@
   &__content {
     display: flex;
     justify-content: space-between;
+
+    @include tablet {
+      display: flex;
+      justify-content: center;
+    }
   }
 
   &__image {
     flex-shrink: 0;
     margin-right: 20px;
+
+    @include tablet {
+      display: none;
+    }
+  }
+
+  @include tablet {
+    padding: 60px 0;
   }
 }
 
@@ -21,6 +34,11 @@
     justify-content: space-between;
     margin-bottom: 24px;
     width: 100%;
+
+    @include mobile {
+      display: block;
+      margin-bottom: 0;
+    }
   }
 
   &__field {
@@ -30,12 +48,22 @@
     &--big {
       width: 100%;
     }
+
+    @include mobile {
+      margin-bottom: 20px;
+      width: 100%;
+    }
   }
 
   &__bottom {
     @include flex-all-sb;
 
     padding-top: 40px;
+
+    @include mobile {
+      display: block;
+      padding-top: 10px;
+    }
   }
 
   &__checkbox {
@@ -80,6 +108,11 @@
     .form-field__caption {
       margin-bottom: 20px;
     }
+
+    @include mobile {
+      margin-bottom: 20px;
+      width: 100%;
+    }
   }
 
   &__radio {
@@ -90,6 +123,11 @@
 
   &__btn {
     padding: 15px 41px;
+
+    @include mobile {
+      margin-top: 25px;
+      width: 100%;
+    }
   }
 
   .choices {
@@ -152,6 +190,14 @@
 
   .choices__list--dropdown {
     background-color: var(--color-athens);
+  }
+
+  @include tablet {
+    width: 90%;
+  }
+
+  @include mobile {
+    width: 100%;
   }
 }
 

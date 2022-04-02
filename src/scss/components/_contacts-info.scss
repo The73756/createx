@@ -10,6 +10,17 @@
     grid-template-columns: repeat(3, 1fr);
     margin-bottom: 120px;
     gap: calc(var(--contacts-gap) * 2);
+
+    @include minidesk {
+      --contacts-gap: 40px;
+
+      margin-bottom: 80px;
+    }
+
+    @include mobile {
+      display: block;
+      margin-bottom: 60px;
+    }
   }
 
   &__soc {
@@ -51,6 +62,12 @@
         background-repeat: no-repeat;
       }
     }
+
+    @include mobile {
+      &:not(:last-child) {
+        margin-bottom: 30px;
+      }
+    }
   }
 
   &__subtitle {
@@ -60,6 +77,14 @@
     font-size: 28px;
     line-height: 150%;
     color: var(--color-ebony);
+
+    @include tablet {
+      text-align: center;
+    }
+
+    @include mobile {
+      font-size: 25px;
+    }
   }
 
   &__address {
@@ -106,6 +131,10 @@
   &__value {
     color: var(--color-ebony);
   }
+
+  @include mobile {
+    padding: 40px 0;
+  }
 }
 
 a.contacts-info__value {
@@ -123,4 +152,9 @@ a.contacts-info__value {
   &:active {
     color: var(--color-active);
   }
+}
+
+.form-field__flex {
+  display: flex;
+  flex-wrap: wrap;
 }

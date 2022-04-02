@@ -2,6 +2,12 @@
   padding: 120px 0;
   background-color: var(--color-light);
 
+  &__container {
+    @include tablet {
+      display: block;
+    }
+  }
+
   &__image {
     grid-column: 7 span;
   }
@@ -9,6 +15,11 @@
   &__content {
     grid-column: 5 span;
     padding-left: 75px;
+
+    @include tablet {
+      padding: 0;
+      padding-top: 20px;
+    }
   }
 
   &__title {
@@ -17,6 +28,12 @@
     font-weight: 900;
     font-size: 46px;
     line-height: 130%;
+
+    @include mobile {
+      margin-bottom: 40px;
+      font-size: 35px;
+      line-height: 48px;
+    }
   }
 
   &__accordion {
@@ -41,6 +58,10 @@
       font-size: 28px;
       line-height: 150%;
       color: var(--color-ebony);
+
+      @include mobile {
+        font-size: 22px;
+      }
     }
 
     .accordion__content {
@@ -89,6 +110,10 @@
         transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out;
       }
     }
+  }
+
+  @include mobile {
+    padding: 40px 0;
   }
 }
 

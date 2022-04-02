@@ -2,7 +2,7 @@
 
 @mixin burger {
   --burger-width: 30px;
-  --burger-height: 30px;
+  --burger-height: 22px;
   --burger-line-height: 2px;
 
   position: relative;
@@ -61,5 +61,9 @@
       transform: scale(0);
       transition: transform 0.3s ease-in-out;
     }
+  }
+
+  @include mobile {
+    --burger-height: 20px;
   }
 }

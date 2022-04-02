@@ -4,15 +4,53 @@
 
   &__content {
     max-width: 612px;
+
+    @include tablet {
+      max-width: 450px;
+    }
+
+    @include minitablet {
+      width: 100%;
+      max-width: none;
+    }
+
+    @include mobile {
+      width: 100%;
+      max-width: none;
+    }
   }
 
   &__image {
     z-index: 5;
     margin-bottom: -60px;
+
+    @include minidesk {
+      width: 380px;
+      object-fit: cover;
+    }
+
+    @include tablet {
+      width: 300px;
+    }
+
+    @include minitablet {
+      display: none;
+    }
   }
 
   &__title {
     margin-bottom: 60px;
+
+    @include tablet {
+      font-size: 38px;
+    }
+
+    @include mobile {
+      margin-bottom: 35px;
+      font-size: 28px;
+      line-height: 40px;
+      text-align: center;
+    }
   }
 
   &__items {
@@ -29,6 +67,18 @@
   &__container {
     display: flex;
     justify-content: space-between;
+
+    @include minitablet {
+      padding-bottom: 40px;
+    }
+  }
+
+  @include minitablet {
+    padding-top: 40px;
+  }
+
+  @include mobile {
+    padding-top: 10px;
   }
 }
 

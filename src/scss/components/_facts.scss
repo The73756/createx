@@ -25,10 +25,28 @@
     margin: 0 auto;
     max-width: 736px;
     gap: 48px;
+
+    @include minitablet {
+      justify-items: center;
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include mobile {
+      grid-row-gap: 25px;
+      grid-template-columns: repeat(1, 1fr);
+    }
   }
 
   &__title {
     margin-bottom: 60px;
+
+    @include mobile {
+      margin-bottom: 25px;
+    }
+  }
+
+  @include mobile {
+    padding: 40px 0;
   }
 }
 

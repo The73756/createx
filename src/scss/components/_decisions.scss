@@ -3,17 +3,31 @@
   padding-bottom: 80px;
   background-color: var(--color-athens);
 
+  .grid {
+    @include tablet {
+      display: block;
+    }
+  }
+
   &__left {
     grid-column: 5 span;
 
     img {
       margin-bottom: -142px;
+
+      @include tablet {
+        display: none;
+      }
     }
   }
 
   &__right {
     grid-column: 7 span;
     padding-left: 104px;
+
+    @include tablet {
+      padding-left: 0;
+    }
   }
 
   &__title {
@@ -43,5 +57,9 @@
     &:not(:last-child) {
       margin-bottom: 21px;
     }
+  }
+
+  @include minitablet {
+    padding: 40px 0;
   }
 }

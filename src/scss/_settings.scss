@@ -129,6 +129,16 @@ a {
   &--home {
     color: var(--color-light);
   }
+
+  @include minitablet {
+    font-size: 60px;
+    line-height: 75px;
+  }
+
+  @include mobile {
+    font-size: 40px;
+    line-height: 55px;
+  }
 }
 
 .main-descr {
@@ -140,6 +150,12 @@ a {
   &--home {
     margin-bottom: 61px;
     color: var(--color-light);
+  }
+
+  @include mobile {
+    margin-bottom: 40px;
+    font-size: 16px;
+    line-height: 24px;
   }
 }
 
@@ -247,6 +263,11 @@ a {
   &--center {
     text-align: center;
   }
+
+  @include mobile {
+    font-size: 28px;
+    line-height: 40px;
+  }
 }
 
 .descr {
@@ -259,10 +280,24 @@ a {
   &--center {
     text-align: center;
   }
+
+  @include mobile {
+    margin-bottom: 25px;
+    font-size: 16px;
+    line-height: 24px;
+  }
 }
 
 .section-offset {
   padding-top: 120px;
+
+  @include minitablet {
+    padding-top: 60px;
+  }
+
+  @include mobile {
+    padding-top: 40px;
+  }
 }
 
 .custom-checkbox {
@@ -416,6 +451,10 @@ a {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   gap: var(--grid-gap);
+
+  @include mobile {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
 
 .to-top {
@@ -462,6 +501,11 @@ a {
   &--active {
     opacity: 1;
     visibility: visible;
+  }
+
+  @include middledesk {
+    right: 20px;
+    bottom: 20px;
   }
 }
 
@@ -559,5 +603,53 @@ a {
 
   .choices__list--dropdown {
     background-color: var(--color-athens);
+  }
+}
+
+.burger {
+  @include burger;
+
+  position: absolute;
+  right: 15px;
+  top: 23px;
+  z-index: 1000;
+  display: none;
+
+  @include tablet {
+    display: block;
+  }
+}
+
+.overlay {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 500;
+  background-color: rgba(#000, 0.6);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+
+  &--active {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.modal {
+  @include mobile {
+    &::before {
+      display: none;
+    }
+  }
+}
+
+.site-modal {
+  @include mobile {
+    padding: 20px;
+    padding-top: 40px;
+    width: 90%;
   }
 }

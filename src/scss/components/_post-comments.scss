@@ -11,4 +11,8 @@
       margin-bottom: 60px;
     }
   }
+
+  @include minitablet {
+    padding: 40px 0;
+  }
 }

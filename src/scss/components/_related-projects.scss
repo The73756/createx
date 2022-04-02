@@ -8,10 +8,19 @@
     align-items: flex-end;
     justify-content: space-between;
     margin-bottom: 48px;
+
+    @include mobile {
+      display: block;
+      margin-bottom: 25px;
+    }
   }
 
   &__slider-nav {
     transform: translateX(12px);
+
+    @include mobile {
+      transform: none;
+    }
   }
 
   &__title {
@@ -38,6 +47,22 @@
       opacity: 1;
       visibility: visible;
     }
+
+    .portfolio-item__title {
+      @include minitablet {
+        margin-bottom: 10px;
+        min-height: 52px;
+      }
+    }
+  }
+
+  @include minitablet {
+    padding-top: 80px;
+    padding-bottom: 40px;
+  }
+
+  @include minitablet {
+    padding: 40px 0;
   }
 }
 

@@ -6,12 +6,27 @@
     column-gap: var(--grid-gap);
     margin-bottom: 80px;
     row-gap: 60px;
+
+    @include mobile {
+      margin-bottom: 50px;
+      row-gap: 40px;
+    }
   }
 
   &__top {
     position: relative;
     margin-bottom: 16px;
     font-size: 0;
+
+    @include tablet {
+      text-align: center;
+    }
+  }
+
+  &__image {
+    @include minitablet {
+      width: 100%;
+    }
   }
 
   &__socials {
@@ -27,6 +42,11 @@
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+
+    @include tablet {
+      opacity: 1;
+      visibility: visible;
+    }
   }
 
   &__item {
@@ -37,6 +57,11 @@
         opacity: 1;
         visibility: visible;
       }
+    }
+
+    @include tablet {
+      grid-column: 6 span;
+      max-width: 285px;
     }
   }
 
@@ -99,5 +124,15 @@
     line-height: 160%;
     text-align: center;
     color: var(--color-storm);
+  }
+
+  .grid {
+    @include tablet {
+      justify-items: center;
+    }
+  }
+
+  @include mobile {
+    padding: 40px 0;
   }
 }

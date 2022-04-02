@@ -29,12 +29,20 @@
 
     &:not(:last-child) {
       margin-bottom: 118px;
+
+      @include minitablet {
+        margin-bottom: 40px;
+      }
     }
 
     &--reverse {
       .services__info {
         order: -1;
         padding-left: 0;
+
+        @include mobile {
+          order: 1;
+        }
       }
 
       .services__image {
@@ -73,5 +81,9 @@
   &__link {
     padding: 10px 27px;
     letter-spacing: normal;
+  }
+
+  @include minitablet {
+    padding: 40px 0;
   }
 }

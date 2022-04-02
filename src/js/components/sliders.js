@@ -8,13 +8,14 @@ Swiper.use([Navigation, Pagination, Thumbs, Autoplay]);
 
 if (portSlider) {
   const portfolioSlider = new Swiper(portSlider, {
-    modules: [Navigation, Pagination],
-    slidesPerView: 3,
+    slidesPerView: 1,
     spaceBetween: gap,
     on: {
       init: function () {
         const activeSlide = portSlider.querySelector('.swiper-slide-active');
+
         const nextActiveSlide = activeSlide.nextElementSibling;
+
         const nextNextActiveSlide = nextActiveSlide.nextElementSibling;
 
         activeSlide.classList.add('slider-visible');
@@ -26,6 +27,14 @@ if (portSlider) {
       nextEl: '.portfolio-section__next',
       prevEl: '.portfolio-section__prev',
     },
+    breakpoints: {
+      576: {
+        slidesPerView: 2
+      },
+      768: {
+        slidesPerView: 3,
+      }
+    }
   });
 
   document.querySelector('.portfolio-section__prev').addEventListener('click', () => {
@@ -45,7 +54,9 @@ if (portSlider) {
 
   document.querySelector('.portfolio-section__next').addEventListener('click', () => {
     const activeSlide = portSlider.querySelector('.swiper-slide-active');
+
     const nextActiveSlide = activeSlide.nextElementSibling;
+
     const nextNextActiveSlide = nextActiveSlide.nextElementSibling;
 
     document.querySelectorAll('.portfolio-section__items .swiper-slide').forEach(el => {
@@ -60,7 +71,7 @@ if (portSlider) {
 
 if (relatedSlider) {
   const relatedProjSlider = new Swiper(relatedSlider, {
-    slidesPerView: 3,
+    slidesPerView: 1,
     spaceBetween: gap,
     on: {
       init: function () {
@@ -77,6 +88,15 @@ if (relatedSlider) {
       nextEl: '.related-projects__next',
       prevEl: '.related-projects__prev',
     },
+
+    breakpoints: {
+      576: {
+        slidesPerView: 2
+      },
+      768: {
+        slidesPerView: 3,
+      }
+    }
   });
 
   document.querySelector('.related-projects__prev').addEventListener('click', () => {
@@ -125,9 +145,17 @@ const workImages = document.querySelector('.work-images-slider');
 if (workImages) {
   const workSlider = new Swiper('.work-images-nav', {
     spaceBetween: 20,
-    slidesPerView: 10,
+    slidesPerView: 4,
     freeMode: true,
     watchSlidesProgress: true,
+    breakpoints: {
+      576: {
+        slidesPerView: 6
+      },
+      768: {
+        slidesPerView: 10,
+      }
+    }
   });
   const workSliderNav = new Swiper(workImages, {
     spaceBetween: 20,

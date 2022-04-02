@@ -5,11 +5,23 @@
 
   &__title {
     margin-bottom: 60px;
+
+    @include mobile {
+      margin-bottom: 25px;
+    }
   }
 
   &__list {
     grid-template-rows: repeat(2, 255px);
     margin-bottom: 80px;
+
+    @include tablet {
+      grid-template-rows: initial;
+    }
+
+    @include mobile {
+      margin-bottom: 40px;
+    }
   }
 
   &__item {
@@ -18,6 +30,31 @@
     &:first-child {
       grid-column: 7 span;
       grid-row: 2 span;
+
+      @include tablet {
+        grid-column: 12 span;
+        grid-row: 1;
+      }
+
+      @include mobile {
+        grid-column: 4 span;
+      }
     }
+
+    @include tablet {
+      grid-column: 6 span;
+    }
+
+    @include mobile {
+      grid-column: 4 span;
+    }
+  }
+
+  @include minitablet {
+    padding: 60px 0;
+  }
+
+  @include mobile {
+    padding: 40px 0;
   }
 }

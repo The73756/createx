@@ -11,6 +11,22 @@
     column-gap: 102px;
     grid-template-columns: repeat(6, 1fr);
     row-gap: 35px;
+
+    @include minidesk {
+      column-gap: 30px;
+    }
+  }
+
+  &__item {
+    @include minidesk {
+      display: flex;
+      justify-content: center;
+      grid-column: 2 span;
+    }
+
+    @include mobile {
+      grid-column: 3 span;
+    }
   }
 
   &__link {
@@ -27,5 +43,13 @@
     .partners__title {
       margin-bottom: 25px;
     }
+  }
+
+  @include minitablet {
+    padding: 60px 0;
+  }
+
+  @include mobile {
+    padding: 40px 0;
   }
 }

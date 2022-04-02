@@ -1,11 +1,21 @@
 .nav {
   &__list {
     @include flex-v-center;
+
+    @include tablet {
+      display: block;
+      margin-bottom: 40px;
+    }
   }
 
   &__item {
     &:not(:last-child) {
       margin-right: 40px;
+    }
+
+    @include tablet {
+      margin-right: 0;
+      margin-bottom: 30px;
     }
   }
 
@@ -30,6 +40,7 @@
     }
 
     &--current {
+      font-weight: 700;
       color: var(--color-primary);
 
       &:focus {

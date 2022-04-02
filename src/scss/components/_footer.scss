@@ -5,16 +5,40 @@
 
   &__left {
     grid-column: 7 span;
+
+    @include minitablet {
+      grid-column: 12 span;
+    }
+
+    @include mobile {
+      grid-column: 4 span;
+    }
   }
 
   &__logo {
     margin-right: 60px;
+
+    @include mobile {
+      display: inline-block;
+      margin-right: 0;
+      margin-bottom: 15px;
+      width: 120px;
+      max-width: none;
+    }
   }
 
   &__top {
     @include flex-v-center;
 
     margin-bottom: 21px;
+
+    @include minitablet {
+      justify-content: space-between;
+    }
+
+    @include mobile {
+      display: block;
+    }
   }
 
   &__descr {
@@ -23,10 +47,22 @@
     max-width: 495px;
     font-size: 14px;
     line-height: 150%;
+
+    @include minitablet {
+      max-width: none;
+    }
   }
 
   &__form {
     grid-column: 5 span;
+
+    @include minitablet {
+      grid-column: 12 span;
+    }
+
+    @include mobile {
+      grid-column: 4 span;
+    }
   }
 
   &__address {
@@ -35,6 +71,10 @@
 
   &__nav {
     grid-column: 8 span;
+
+    @include mobile {
+      grid-column: 4 span;
+    }
   }
 
   &__copyright {
@@ -51,6 +91,15 @@
       background-size: 16px 16px;
       background-repeat: no-repeat;
     }
+
+    @include mobile {
+      grid-column: 4 span;
+      padding-top: 10px;
+    }
+  }
+
+  @include mobile {
+    padding: 40px 0;
   }
 }
 
@@ -62,6 +111,12 @@
     font-size: 24px;
     line-height: 150%;
     color: var(--color-light);
+
+    @include mobile {
+      margin-bottom: 15px;
+      font-size: 20px;
+      line-height: 32px;
+    }
   }
 
   &__items {
@@ -79,6 +134,10 @@
   .form-field {
     margin: 0;
     width: 364px;
+
+    @include minitablet {
+      width: 100%;
+    }
   }
 
   .form-field__input {
@@ -99,6 +158,10 @@
     border-bottom-left-radius: 0;
     padding: 11px 21px;
     letter-spacing: normal;
+
+    @include mobile {
+      font-size: 14px;
+    }
   }
 }
 
@@ -111,6 +174,11 @@
   letter-spacing: 1px;
   text-transform: uppercase;
   color: var(--color-light);
+
+  @include mobile {
+    margin-bottom: 15px;
+    font-size: 18px;
+  }
 }
 
 .footer-address {
@@ -148,6 +216,10 @@
   &__name {
     color: var(--color-light);
   }
+
+  @include mobile {
+    padding-top: 0;
+  }
 }
 
 .footer-nav {
@@ -158,6 +230,28 @@
   &__col {
     &:not(:last-child) {
       margin-right: 125px;
+
+      @include minitablet {
+        margin-right: 65px;
+      }
+
+      @include mobile {
+        margin-right: 0;
+      }
+    }
+
+    .footer__title {
+      @include mobile {
+        font-size: 15px;
+      }
+    }
+
+    @include mobile {
+      width: 50%;
+
+      &:last-child {
+        text-align: end;
+      }
     }
   }
 
@@ -185,5 +279,14 @@
     &:active {
       color: var(--color-light);
     }
+  }
+
+  @include minitablet {
+    padding-left: 24px;
+  }
+
+  @include mobile {
+    padding-top: 0;
+    padding-left: 0;
   }
 }

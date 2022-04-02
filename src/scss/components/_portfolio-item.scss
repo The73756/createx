@@ -24,6 +24,14 @@
     font-size: 20px;
     line-height: 150%;
     color: var(--color-ebony);
+
+    @include tablet {
+      font-size: 18px;
+    }
+  }
+
+  &__image {
+    width: 100%;
   }
 
   &__descr {
@@ -54,6 +62,10 @@
       color: var(--color-light);
       background-color: var(--color-primary);
     }
+
+    @include minitablet {
+      margin-bottom: 0;
+    }
   }
 
   &:focus {
@@ -66,6 +78,16 @@
 
     .portfolio-item__content {
       transform: translateY(-68px);
+
+      @include minitablet {
+        transform: none;
+      }
+    }
+  }
+
+  @include minitablet {
+    &:hover {
+      transform: none;
     }
   }
 }

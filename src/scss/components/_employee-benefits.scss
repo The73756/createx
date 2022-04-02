@@ -9,6 +9,18 @@
     grid-template-columns: repeat(3, 1fr);
     margin-bottom: 27px;
     gap: calc(var(--employee-benefits-gap) * 2);
+
+    @include tablet {
+      --employee-benefits-gap: 30px;
+    }
+
+    @include minitablet {
+      --employee-benefits-gap: 10px;
+    }
+
+    @include mobile {
+      display: block;
+    }
   }
 
   &__item {
@@ -45,6 +57,12 @@
     &--salary {
       background-image: url("../img/salary.svg");
     }
+
+    @include mobile {
+      &:not(:last-child) {
+        margin-bottom: 30px;
+      }
+    }
   }
 
   &__subtitle {
@@ -61,5 +79,9 @@
     font-size: 16px;
     line-height: 160%;
     color: var(--color-storm);
+  }
+
+  @include tablet {
+    padding-bottom: 60px;
   }
 }

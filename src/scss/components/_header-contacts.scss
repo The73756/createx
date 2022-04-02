@@ -7,6 +7,23 @@
     &:not(:last-child) {
       margin-right: 35px;
     }
+
+    @include tablet {
+      margin-right: 0;
+      margin-bottom: 30px;
+    }
+  }
+
+  @include tablet {
+    display: none;
+  }
+
+  &--nav {
+    display: none;
+
+    @include tablet {
+      display: block;
+    }
   }
 }
 
@@ -28,6 +45,10 @@
     line-height: 150%;
     color: var(--color-ebony);
     transition: color 0.3s ease-in-out;
+
+    @include minidesk {
+      font-size: 16px;
+    }
   }
 
   &:focus {

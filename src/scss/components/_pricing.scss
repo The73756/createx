@@ -12,6 +12,14 @@
 
   &__descr {
     margin-bottom: 60px;
+
+    @include mobile {
+      margin-bottom: 30px;
+    }
+  }
+
+  @include mobile {
+    padding: 40px 0;
   }
 }
 
@@ -25,6 +33,10 @@
   box-shadow: var(--main-shadow);
   box-sizing: border-box;
   background-color: var(--color-light);
+
+  @include minitablet {
+    overflow-x: auto;
+  }
 }
 
 .table {
@@ -92,6 +104,10 @@
     .btn {
       padding: 7px 23px;
       font-size: 12px;
+
+      @include tablet {
+        padding: 7px 10px;
+      }
     }
 
     &:first-child {
@@ -117,5 +133,9 @@
     line-height: 160%;
     text-align: center;
     color: var(--color-gray);
+  }
+
+  @include minitablet {
+    width: 1200px;
   }
 }

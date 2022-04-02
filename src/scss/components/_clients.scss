@@ -11,6 +11,23 @@
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     gap: 102px;
+
+    @include minidesk {
+      column-gap: 30px;
+      row-gap: 35px;
+    }
+  }
+
+  &__item {
+    @include minidesk {
+      display: flex;
+      justify-content: center;
+      grid-column: 2 span;
+    }
+
+    @include mobile {
+      grid-column: 3 span;
+    }
   }
 
   &__link {
@@ -18,5 +35,9 @@
       outline: 2px solid rgb(255 90 48 / 40%);
       outline-offset: 2px;
     }
+  }
+
+  @include minitablet {
+    padding: 60px 0;
   }
 }

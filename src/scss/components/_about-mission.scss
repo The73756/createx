@@ -4,11 +4,23 @@
   background-color: var(--color-athens);
 
   &__list {
-    --mission-gap: 94px;
+    --about-mission-gap: 94px;
 
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: calc(var(--mission-gap) * 2);
+    gap: calc(var(--about-mission-gap) * 2);
+
+    @include tablet {
+      --about-mission-gap: 30px;
+    }
+
+    @include minitablet {
+      --about-mission-gap: 10px;
+    }
+
+    @include mobile {
+      display: block;
+    }
   }
 
   &__item {
@@ -23,7 +35,7 @@
       &::after {
         content: "";
         position: absolute;
-        right: calc(-1 * var(--mission-gap));
+        right: calc(-1 * var(--about-mission-gap));
         top: 0;
         width: 1px;
         height: 100%;
@@ -45,6 +57,12 @@
     &--comfort {
       background-image: url("../img/comfort.svg");
     }
+
+    @include mobile {
+      &:not(:last-child) {
+        margin-bottom: 30px;
+      }
+    }
   }
 
   &__subtitle {
@@ -61,5 +79,13 @@
     font-size: 16px;
     line-height: 160%;
     color: var(--color-storm);
+  }
+
+  @include tablet {
+    padding: 60px 0;
+  }
+
+  @include minitablet {
+    padding: 40px 0;
   }
 }

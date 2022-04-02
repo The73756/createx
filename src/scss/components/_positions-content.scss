@@ -4,12 +4,25 @@
 
   &__left {
     grid-column: 7 span;
+
+    @include mobile {
+      grid-column: 4 span;
+    }
   }
 
   &__right {
     display: flex;
     justify-content: flex-end;
     grid-column: 5 span;
+
+    @include mobile {
+      justify-content: flex-start;
+      grid-column: 4 span;
+    }
+  }
+
+  @include tablet {
+    padding: 40px 0;
   }
 }
 
@@ -80,6 +93,17 @@
     font-size: 14px;
     letter-spacing: 0.5px;
   }
+
+  &__left {
+    @include tablet {
+      margin-bottom: 15px;
+    }
+  }
+
+  @include tablet {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }
 
 .positions-looking {
@@ -91,6 +115,11 @@
     font-size: 28px;
     line-height: 150%;
     color: var(--color-ebony);
+
+    @include tablet {
+      margin-bottom: 15px;
+      font-size: 25px;
+    }
   }
 
   &__descr {
@@ -99,6 +128,10 @@
     font-size: 18px;
     line-height: 150%;
     color: var(--color-gray);
+
+    @include tablet {
+      margin-bottom: 40px;
+    }
   }
 
   &__btn {
@@ -111,9 +144,16 @@
       padding: 15px 54px;
     }
   }
-}
 
-.sticky {
-  position: sticky;
-  top: 0;
+  &__btns {
+    @include tablet {
+      display: flex;
+      flex-direction: column;
+
+      .positions-looking__btn--subs {
+        margin-right: 0;
+        margin-bottom: 15px;
+      }
+    }
+  }
 }
