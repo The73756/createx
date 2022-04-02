@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en" class="page">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color" content="#111111">
+  <title>Createx Construction</title>
+  <link rel="preload" href="fonts/UbuntuBold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/UbuntuRegular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/LatoBlack.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/LatoBold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/vendor.css">
+  <link rel="stylesheet" href="css/main.css">
+  <script defer src="js/main.js"></script>
+</head>
+
+<body class="page__body" id="page">
+  <div class="site-container">
+    <header class="header header--secondary">
+  <div class="container header__container">
+    <a href="index.html" class="logo">
+      <img src="img/logo.svg" alt="Createx logo">
+    </a>
+    <nav class="nav header__nav">
+      <ul class="nav__list list-reset">
+        <li class="nav__item"><a href="about.html" class="nav__link">About Us</a></li>
+        <li class="nav__item"><a href="services.html" class="nav__link">Services</a></li>
+        <li class="nav__item"><a href="work.html" class="nav__link--current">Work</a></li>
+        <li class="nav__item"><a href="news.html" class="nav__link">News</a></li>
+        <li class="nav__item"><a href="contacts.html" class="nav__link">Contacts</a></li>
+      </ul>
+      <div class="header-contacts header-contacts--nav">
+        <a href="tel:4055550128" class="header-contacts__link contacts-link contacts-link--call">
+          <span class="contacts-link__caption">Call us</span>
+          <span class="contacts-link__value">(405) 555-0128</span>
+        </a>
+
+        <a href="mailto:hello@createx.com" class="header-contacts__link contacts-link contacts-link--mail">
+          <span class="contacts-link__caption">Talk to us</span>
+          <span class="contacts-link__value">hello@createx.com</span>
+        </a>
+      </div>
+    </nav>
+    <div class="header-contacts">
+        <a href="tel:4055550128" class="header-contacts__link contacts-link contacts-link--call">
+          <span class="contacts-link__caption">Call us</span>
+          <span class="contacts-link__value">(405) 555-0128</span>
+        </a>
+
+        <a href="mailto:hello@createx.com" class="header-contacts__link contacts-link contacts-link--mail">
+          <span class="contacts-link__caption">Talk to us</span>
+          <span class="contacts-link__value">hello@createx.com</span>
+        </a>
+    </div>
+    <button class="burger" aria-label="Open menu" aria-expanded="false"  data-burger>
+      <span class="burger__line"></span>
+    </button>
+  </div>
+</header>
+
+    <main>
+      <section class="page-hero page-hero--work">
+  <div class="container">
+    <ul class="list-reset breadcrumbs page-hero__breadcrumbs">
+      <li class="breadcrumbs__item">
+        <a href="index.html" class="breadcrumbs__link">Homepage</a>
+      </li>
+      <li class="breadcrumbs__item">
+        <a class="breadcrumbs__link">Work</a>
+      </li>
+    </ul>
+    <h1 class="page-hero__title">Our work</h1>
+    <p class="page-hero__descr">
+      Our portfolio represents 20 years of construction experience backed by a passion for perfect client service, quality and innovations in consctuction industry.
+    </p>
+  </div>
+</section>
+
+      <section class="portfolio">
+  <div class="container">
+    <h2 class="visually-hidden">Portfolio</h2>
+    <ul class="portfolio-tabs-nav list-reset">
+      <li class="portfolio-tabs-nav__item">
+        <button class="btn-reset portfolio-tabs-nav__btn portfolio-tabs-nav__btn--active" data-path="all">
+          <svg class="portfolio-tabs-nav__icon">
+            <use xlink:href="img/sprite.svg#house"></use>
+          </svg>
+          <span class="portfolio-tabs-nav__text">All projects</span>
+        </button>
+      </li>
+      <li class="portfolio-tabs-nav__item">
+        <button class="btn-reset portfolio-tabs-nav__btn" data-path="constr">
+          <svg class="portfolio-tabs-nav__icon">
+            <use xlink:href="img/sprite.svg#services-1"></use>
+          </svg>
+          <span class="portfolio-tabs-nav__text">Construction</span>
+        </button>
+      </li>
+      <li class="portfolio-tabs-nav__item">
+        <button class="btn-reset portfolio-tabs-nav__btn" data-path="dev">
+          <svg class="portfolio-tabs-nav__icon">
+            <use xlink:href="img/sprite.svg#services-2"></use>
+          </svg>
+          <span class="portfolio-tabs-nav__text">Project Development</span>
+        </button>
+      </li>
+      <li class="portfolio-tabs-nav__item">
+        <button class="btn-reset portfolio-tabs-nav__btn" data-path="design">
+          <svg class="portfolio-tabs-nav__icon">
+            <use xlink:href="img/sprite.svg#services-3"></use>
+          </svg>
+          <span class="portfolio-tabs-nav__text">Interior Design</span>
+        </button>
+      </li>
+      <li class="portfolio-tabs-nav__item">
+        <button class="btn-reset portfolio-tabs-nav__btn" data-path="repair">
+          <svg class="portfolio-tabs-nav__icon">
+            <use xlink:href="img/sprite.svg#services-4"></use>
+          </svg>
+          <span class="portfolio-tabs-nav__text">Repairs</span>
+        </button>
+      </li>
+    </ul>
+    <ul class="list-reset portfolio-tabs grid">
+      <li class="portfolio-tabs__item portfolio-tabs__item--visible">
+        <a href="work-1.html" class="portfolio-item" data-target="repair">
+          <picture>
+            <source srcset="img/portfolio-1.avif" type="image/avif">
+            <source srcset="img/portfolio-1.webp" type="image/webp">
+            <img loading="lazy" src="img/portfolio-1.jpg" class="portfolio-item__image" alt="Portfolio cover">
+          </picture>
+          <div class="portfolio-item__content">
+            <h3 class="portfolio-item__title">Red Finger Building</h3>
+            <span class="portfolio-item__descr">Business Centers</span>
+            <div class="portfolio-item__btn">View Project</div>
+          </div>
+        </a>
+      </li>
+      <li class="portfolio-tabs__item portfolio-tabs__item--visible">
+        <a href="work-1.html" class="portfolio-item" data-target="repair">
+          <picture>
+            <source srcset="img/portfolio-1.avif" type="image/avif">
+            <source srcset="img/portfolio-1.webp" type="image/webp">
+            <img loading="lazy" src="img/portfolio-1.jpg" class="portfolio-item__image" alt="Portfolio cover">
+          </picture>
+          <div class="portfolio-item__content">
+            <h3 class="portfolio-item__title">Red Finger Building</h3>
+            <span class="portfolio-item__descr">Business Centers</span>
+            <div class="portfolio-item__btn">View Project</div>
+          </div>
+        </a>
+      </li>
+      <li class="portfolio-tabs__item portfolio-tabs__item--visible">
+        <a href="work-1.html" class="portfolio-item" data-target="dev">
+          <picture>
+            <source srcset="img/portfolio-1.avif" type="image/avif">
+            <source srcset="img/portfolio-1.webp" type="image/webp">
+            <img loading="lazy" src="img/portfolio-1.jpg" class="portfolio-item__image" alt="Portfolio cover">
+          </picture>
+          <div class="portfolio-item__content">
+            <h3 class="portfolio-item__title">Red Finger Building</h3>
+            <span class="portfolio-item__descr">Business Centers</span>
+            <div class="portfolio-item__btn">View Project</div>
+          </div>
+        </a>
+      </li>
+      <li class="portfolio-tabs__item portfolio-tabs__item--visible">
+        <a href="work-1.html" class="portfolio-item" data-target="constr">
+          <picture>
+            <source srcset="img/portfolio-1.avif" type="image/avif">
+            <source srcset="img/portfolio-1.webp" type="image/webp">
+            <img loading="lazy" src="img/portfolio-1.jpg" class="portfolio-item__image" alt="Portfolio cover">
+          </picture>
+          <div class="portfolio-item__content">
+            <h3 class="portfolio-item__title">Red Finger Building</h3>
+            <span class="portfolio-item__descr">Business Centers</span>
+            <div class="portfolio-item__btn">View Project</div>
+          </div>
+        </a>
+      </li>
+      <li class="portfolio-tabs__item portfolio-tabs__item--visible">
+        <a href="work-1.html" class="portfolio-item" data-target="design">
+          <picture>
+            <source srcset="img/portfolio-1.avif" type="image/avif">
+            <source srcset="img/portfolio-1.webp" type="image/webp">
+            <img loading="lazy" src="img/portfolio-1.jpg" class="portfolio-item__image" alt="Portfolio cover">
+          </picture>
+          <div class="portfolio-item__content">
+            <h3 class="portfolio-item__title">Red Finger Building</h3>
+            <span class="portfolio-item__descr">Business Centers</span>
+            <div class="portfolio-item__btn">View Project</div>
+          </div>
+        </a>
+      </li>
+      <li class="portfolio-tabs__item portfolio-tabs__item--visible">
+        <a href="work-1.html" class="portfolio-item" data-target="constr">
+          <picture>
+            <source srcset="img/portfolio-1.avif" type="image/avif">
+            <source srcset="img/portfolio-1.webp" type="image/webp">
+            <img loading="lazy" src="img/portfolio-1.jpg" class="portfolio-item__image" alt="Portfolio cover">
+          </picture>
+          <div class="portfolio-item__content">
+            <h3 class="portfolio-item__title">Red Finger Building</h3>
+            <span class="portfolio-item__descr">Business Centers</span>
+            <div class="portfolio-item__btn">View Project</div>
+          </div>
+        </a>
+      </li>
+      <li class="portfolio-tabs__item portfolio-tabs__item--visible">
+        <a href="work-1.html" class="portfolio-item" data-target="dev">
+          <picture>
+            <source srcset="img/portfolio-1.avif" type="image/avif">
+            <source srcset="img/portfolio-1.webp" type="image/webp">
+            <img loading="lazy" src="img/portfolio-1.jpg" class="portfolio-item__image" alt="Portfolio cover">
+          </picture>
+          <div class="portfolio-item__content">
+            <h3 class="portfolio-item__title">Red Finger Building</h3>
+            <span class="portfolio-item__descr">Business Centers</span>
+            <div class="portfolio-item__btn">View Project</div>
+          </div>
+        </a>
+      </li>
+      <li class="portfolio-tabs__item portfolio-tabs__item--visible">
+        <a href="work-1.html" class="portfolio-item" data-target="dev">
+          <picture>
+            <source srcset="img/portfolio-1.avif" type="image/avif">
+            <source srcset="img/portfolio-1.webp" type="image/webp">
+            <img loading="lazy" src="img/portfolio-1.jpg" class="portfolio-item__image" alt="Portfolio cover">
+          </picture>
+          <div class="portfolio-item__content">
+            <h3 class="portfolio-item__title">Red Finger Building</h3>
+            <span class="portfolio-item__descr">Business Centers</span>
+            <div class="portfolio-item__btn">View Project</div>
+          </div>
+        </a>
+      </li>
+      <li class="portfolio-tabs__item portfolio-tabs__item--visible">
+        <a href="work-1.html" class="portfolio-item" data-target="dev">
+          <picture>
+            <source srcset="img/portfolio-1.avif" type="image/avif">
+            <source srcset="img/portfolio-1.webp" type="image/webp">
+            <img loading="lazy" src="img/portfolio-1.jpg" class="portfolio-item__image" alt="Portfolio cover">
+          </picture>
+          <div class="portfolio-item__content">
+            <h3 class="portfolio-item__title">Red Finger Building</h3>
+            <span class="portfolio-item__descr">Business Centers</span>
+            <div class="portfolio-item__btn">View Project</div>
+          </div>
+        </a>
+      </li>
+      <li class="portfolio-tabs__item portfolio-tabs__item--visible">
+        <a href="work-1.html" class="portfolio-item" data-target="dev">
+          <picture>
+            <source srcset="img/portfolio-1.avif" type="image/avif">
+            <source srcset="img/portfolio-1.webp" type="image/webp">
+            <img loading="lazy" src="img/portfolio-1.jpg" class="portfolio-item__image" alt="Portfolio cover">
+          </picture>
+          <div class="portfolio-item__content">
+            <h3 class="portfolio-item__title">Red Finger Building</h3>
+            <span class="portfolio-item__descr">Business Centers</span>
+            <div class="portfolio-item__btn">View Project</div>
+          </div>
+        </a>
+      </li>
+      <li class="portfolio-tabs__item portfolio-tabs__item--visible">
+        <a href="work-1.html" class="portfolio-item" data-target="dev">
+          <picture>
+            <source srcset="img/portfolio-1.avif" type="image/avif">
+            <source srcset="img/portfolio-1.webp" type="image/webp">
+            <img loading="lazy" src="img/portfolio-1.jpg" class="portfolio-item__image" alt="Portfolio cover">
+          </picture>
+          <div class="portfolio-item__content">
+            <h3 class="portfolio-item__title">Red Finger Building</h3>
+            <span class="portfolio-item__descr">Business Centers</span>
+            <div class="portfolio-item__btn">View Project</div>
+          </div>
+        </a>
+      </li>
+      <li class="portfolio-tabs__item portfolio-tabs__item--visible">
+        <a href="work-1.html" class="portfolio-item" data-target="dev">
+          <picture>
+            <source srcset="img/portfolio-1.avif" type="image/avif">
+            <source srcset="img/portfolio-1.webp" type="image/webp">
+            <img loading="lazy" src="img/portfolio-1.jpg" class="portfolio-item__image" alt="Portfolio cover">
+          </picture>
+          <div class="portfolio-item__content">
+            <h3 class="portfolio-item__title">Red Finger Building</h3>
+            <span class="portfolio-item__descr">Business Centers</span>
+            <div class="portfolio-item__btn">View Project</div>
+          </div>
+        </a>
+      </li>
+      <li class="portfolio-tabs__item portfolio-tabs__item--visible">
+        <a href="work-1.html" class="portfolio-item" data-target="dev">
+          <picture>
+            <source srcset="img/portfolio-1.avif" type="image/avif">
+            <source srcset="img/portfolio-1.webp" type="image/webp">
+            <img loading="lazy" src="img/portfolio-1.jpg" class="portfolio-item__image" alt="Portfolio cover">
+          </picture>
+          <div class="portfolio-item__content">
+            <h3 class="portfolio-item__title">Red Finger Building</h3>
+            <span class="portfolio-item__descr">Business Centers</span>
+            <div class="portfolio-item__btn">View Project</div>
+          </div>
+        </a>
+      </li>
+      <li class="portfolio-tabs__item portfolio-tabs__item--visible">
+        <a href="work-1.html" class="portfolio-item" data-target="dev">
+          <picture>
+            <source srcset="img/portfolio-1.avif" type="image/avif">
+            <source srcset="img/portfolio-1.webp" type="image/webp">
+            <img loading="lazy" src="img/portfolio-1.jpg" class="portfolio-item__image" alt="Portfolio cover">
+          </picture>
+          <div class="portfolio-item__content">
+            <h3 class="portfolio-item__title">Red Finger Building</h3>
+            <span class="portfolio-item__descr">Business Centers</span>
+            <div class="portfolio-item__btn">View Project</div>
+          </div>
+        </a>
+      </li>
+      <li class="portfolio-tabs__item portfolio-tabs__item--visible">
+        <a href="work-1.html" class="portfolio-item" data-target="dev">
+          <picture>
+            <source srcset="img/portfolio-1.avif" type="image/avif">
+            <source srcset="img/portfolio-1.webp" type="image/webp">
+            <img loading="lazy" src="img/portfolio-1.jpg" class="portfolio-item__image" alt="Portfolio cover">
+          </picture>
+          <div class="portfolio-item__content">
+            <h3 class="portfolio-item__title">Red Finger Building</h3>
+            <span class="portfolio-item__descr">Business Centers</span>
+            <div class="portfolio-item__btn">View Project</div>
+          </div>
+        </a>
+      </li>
+      <li class="portfolio-tabs__item portfolio-tabs__item--visible">
+        <a href="work-1.html" class="portfolio-item" data-target="design">
+          <picture>
+            <source srcset="img/portfolio-1.avif" type="image/avif">
+            <source srcset="img/portfolio-1.webp" type="image/webp">
+            <img loading="lazy" src="img/portfolio-1.jpg" class="portfolio-item__image" alt="Portfolio cover">
+          </picture>
+          <div class="portfolio-item__content">
+            <h3 class="portfolio-item__title">Red Finger Building</h3>
+            <span class="portfolio-item__descr">Business Centers</span>
+            <div class="portfolio-item__btn">View Project</div>
+          </div>
+        </a>
+      </li>
+      <li class="portfolio-tabs__item portfolio-tabs__item--visible">
+        <a href="work-1.html" class="portfolio-item" data-target="design">
+          <picture>
+            <source srcset="img/portfolio-1.avif" type="image/avif">
+            <source srcset="img/portfolio-1.webp" type="image/webp">
+            <img loading="lazy" src="img/portfolio-1.jpg" class="portfolio-item__image" alt="Portfolio cover">
+          </picture>
+          <div class="portfolio-item__content">
+            <h3 class="portfolio-item__title">Red Finger Building</h3>
+            <span class="portfolio-item__descr">Business Centers</span>
+            <div class="portfolio-item__btn">View Project</div>
+          </div>
+        </a>
+      </li>
+      <li class="portfolio-tabs__item portfolio-tabs__item--visible">
+        <a href="work-1.html" class="portfolio-item" data-target="design">
+          <picture>
+            <source srcset="img/portfolio-1.avif" type="image/avif">
+            <source srcset="img/portfolio-1.webp" type="image/webp">
+            <img loading="lazy" src="img/portfolio-1.jpg" class="portfolio-item__image" alt="Portfolio cover">
+          </picture>
+          <div class="portfolio-item__content">
+            <h3 class="portfolio-item__title">Red Finger Building</h3>
+            <span class="portfolio-item__descr">Business Centers</span>
+            <div class="portfolio-item__btn">View Project</div>
+          </div>
+        </a>
+      </li>
+    </ul>
+    <div class="centered">
+      <button class="btn-reset portfolio-more">
+        <svg>
+          <use xlink:href="img/sprite.svg#load-more"></use>
+        </svg>
+        Load more
+      </button>
+    </div>
+  </div>
+</section>
+
+      <section class="testimonials">
+  <div class="container testimonials__container">
+    <div class="testimonials__content">
+      <h2 class="title testimonials__title">
+        What our clients are saying
+      </h2>
+      <div class="swiper testimonials__items swiper-no-swiping">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="testimonials-item">
+              <div class="testimonials-item__image">
+                <picture>
+                  <source srcset="img/testimonials-author.avif" type="image/avif">
+                  <source srcset="img/testimonials-author.webp" type="image/webp">
+                  <img loading="lazy" src="img/testimonials-author.png" class="image" alt="Testimonials author">
+                </picture>
+              </div>
+              <p class="testimonials-item__descr">
+                Ipsum aute sunt aliquip aute et occaecat. Anim minim do cillum eiusmod enim. Consectetur magna cillum consequat minim laboris cillum laboris voluptate minim proident exercitation ullamco.
+              </p>
+              <span class="testimonials-item__author">Shawn Edwards</span>
+              <span class="testimonials-item__author-position">Position, Company name</span>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="testimonials-item">
+              <div class="testimonials-item__image">
+                <picture>
+                  <source srcset="img/testimonials-author.avif" type="image/avif">
+                  <source srcset="img/testimonials-author.webp" type="image/webp">
+                  <img loading="lazy" src="img/testimonials-author.png" class="image" alt="Testimonials author">
+                </picture>
+              </div>
+              <p class="testimonials-item__descr">
+                Ipsum aute sunt aliquip aute et occaecat. Anim minim do cillum eiusmod enim. Consectetur magna cillum consequat minim laboris cillum laboris voluptate minim proident exercitation ullamco.
+              </p>
+              <span class="testimonials-item__author">Shawn Edwards</span>
+              <span class="testimonials-item__author-position">Position, Company name</span>
+            </div>
+          </div>
+        </div>
+        <div class="slider-nav testimonials__slider-nav">
+          <button class="btn-reset slider-nav__btn testimonials__prev slider-btn" aria-label="Slider prev">
+            <svg>
+              <use xlink:href="img/sprite.svg#left-arrow"></use>
+            </svg>
+          </button>
+          <button class="btn-reset slider-nav__btn testimonials__next slider-btn" aria-label="Slider next">
+            <svg>
+              <use xlink:href="img/sprite.svg#right-arrow"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <img src="img/testimonials-image.jpg" aria-hidden="true" class="testimonials__image">
+  </div>
+</section>
+
+      <section class="clients">
+  <div class="container">
+    <h2 class="title title--center clients__title">Our clients</h2>
+    <ul class="list-reset clients__list">
+      <li class="clients__item">
+        <a href="#" class="clients__link">
+          <img class="clients__logo" src="img/partners/partners-1.png" alt="logo-1">
+        </a>
+      </li>
+      <li class="clients__item">
+        <a href="#" class="clients__link">
+          <img class="clients__logo" src="img/partners/partners-2.png" alt="logo-2">
+        </a>
+      </li>
+      <li class="clients__item">
+        <a href="#" class="clients__link">
+          <img class="clients__logo" src="img/partners/partners-3.png" alt="logo-3">
+        </a>
+      </li>
+      <li class="clients__item">
+        <a href="#" class="clients__link">
+          <img class="clients__logo" src="img/partners/partners-4.png" alt="logo-4">
+        </a>
+      </li>
+      <li class="clients__item">
+        <a href="#" class="clients__link">
+          <img class="clients__logo" src="img/partners/partners-5.png" alt="logo-5">
+        </a>
+      </li>
+      <li class="clients__item">
+        <a href="#" class="clients__link">
+          <img class="clients__logo" src="img/partners/partners-6.png" alt="logo-6">
+        </a>
+      </li>
+    </ul>
+  </div>
+</section>
+
+      <section class="contacts-section">
+  <h2 class="visually-hidden">Contacts</h2>
+  <div class="container contacts-section__container">
+    <form class="contacts-section__form contacts-form">
+      <h3 class="contacts-form__title">A quick way to discuss details</h3>
+      <label class="form-field form-field--gray contacts-form__field">
+        <span class="form-field__caption">Name*</span>
+        <input class="form-field__input" type="text" name="name" placeholder="Your name">
+      </label>
+
+      <label class="form-field form-field--gray contacts-form__field">
+        <span class="form-field__caption">Phone*</span>
+        <input class="form-field__input" type="tel" name="phone" placeholder="Your phone number">
+      </label>
+
+      <label class="form-field form-field--gray contacts-form__field">
+        <span class="form-field__caption">Email</span>
+        <input class="form-field__input" type="email" name="email" placeholder="Your working email">
+      </label>
+
+      <label class="form-field form-field--gray contacts-form__field">
+        <span class="form-field__caption">Message*</span>
+        <textarea class="form-field__input form-field__input--big" name="message" placeholder="Your message"></textarea>
+      </label>
+      <label class="custom-checkbox contacts-form__checkbox">
+        <input class="custom-checkbox__input" type="checkbox">
+        <span class="custom-checkbox__text">I agree to receive communications from Createx Construction Bureau.</span>
+      </label>
+      <div class="centered">
+        <button class="contacts-form__btn btn btn--fill" type="submit">send request</button>
+      </div>
+    </form>
+  </div>
+</section>
+
+    </main>
+    <footer class="footer">
+  <a href="#page" data-scroll class="to-top">
+    <span class="to-top__text">GO to top</span>
+    <span class="to-top__icon">
+      <svg>
+        <use xlink:href="img/sprite.svg#to-top"></use>
+      </svg>
+    </span>
+  </a>
+  <div class="container footer__container grid">
+    <div class="footer__left">
+      <div class="footer__top">
+        <a href="#" class="logo footer__logo">
+          <img src="img/logo-footer.svg" alt="Createx logo">
+        </a>
+        <ul class="social footer__social list-reset">
+          <li class="social__item">
+            <a href="#" target="_blank" class="social__link" aria-label="WhatsApp">
+              <svg>
+                <use xlink:href="img/sprite.svg#whats"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="social__item">
+            <a href="#" target="_blank" class="social__link" aria-label="Messenger">
+              <svg>
+                <use xlink:href="img/sprite.svg#mess"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="social__item">
+            <a href="#" target="_blank" class="social__link" aria-label="Facebook">
+              <svg>
+                <use xlink:href="img/sprite.svg#facebook"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="social__item">
+            <a href="#" target="_blank" class="social__link" aria-label="Twitter">
+              <svg>
+                <use xlink:href="img/sprite.svg#twitter"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="social__item">
+            <a href="#" target="_blank" class="social__link" aria-label="Youtube">
+              <svg>
+                <use xlink:href="img/sprite.svg#youtube"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <p class="footer__descr">
+        Createx Construction Bureau has been successfully operating in the USA construction market since 2000. We are proud to offer you quality construction and exemplary service. Our mission is to set the highest standards for construction sphere.
+      </p>
+    </div>
+    <form action="#" class="footer-form footer__form">
+      <h3 class="footer-form__title">Let’s stay in touch</h3>
+      <div class="footer-form__items">
+        <label class="form-field form-field--gray contacts-form__field">
+          <input class="form-field__input" type="email" name="email" placeholder="Your email address ">
+        </label>
+        <button class="footer-form__btn btn btn--fill">Subscribe</button>
+      </div>
+      <p class="footer-form__descr">
+        *Subscribe to our newsletter to receive communications and early updates from Createx Construction Bureau.
+      </p>
+    </form>
+    <address class="footer-address footer__address">
+      <h3 class="footer-address__title footer__title">Head Office</h3>
+      <span class="footer-address__item">
+        <span class="footer-address__name">Address:</span>
+        8502 Preston Rd. Inglewood, New York
+      </span>
+      <span class="footer-address__item">
+        <span class="footer-address__name">Call:</span>
+        <a href="tel:4055550128">(405) 555-0128</a>
+      </span>
+      <span class="footer-address__item">
+        <span class="footer-address__name">Email:</span>
+        <a href="mailto:hello@createx.com">hello@createx.com</a>
+      </span>
+    </address>
+    <nav class="footer-nav footer__nav" title="secondary navigation">
+        <div class="footer-nav__col">
+          <h3 class="footer-nav__title footer__title">Who we are</h3>
+          <ul class="list-reset footer-nav__list">
+            <li class="footer-nav__item"><a href="#" class="footer-nav__link">About Us</a></li>
+            <li class="footer-nav__item"><a href="#" class="footer-nav__link">Available Positions</a></li>
+            <li class="footer-nav__item"><a href="#" class="footer-nav__link">Contacts</a></li>
+          </ul>
+        </div>
+        <div class="footer-nav__col">
+          <h3 class="footer-nav__title footer__title">Our Experience</h3>
+          <ul class="list-reset footer-nav__list">
+            <li class="footer-nav__item"><a href="#" class="footer-nav__link">Services</a></li>
+            <li class="footer-nav__item"><a href="#" class="footer-nav__link">Work</a></li>
+            <li class="footer-nav__item"><a href="#" class="footer-nav__link">News</a></li>
+          </ul>
+        </div>
+    </nav>
+    <small class="footer__copyright">
+      © All rights reserved. Made with <span> by Createx Studio</span>
+    </small>
+  </div>
+</footer>
+<div class="overlay"></div>
+
+  </div>
+</body>
+</html>
